@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Form</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="header">
+        <h2 id="heading"> Article Form</h2>
+    </div>
+    <div class="form">
+        <form id="form" action="welcome.html">
+
+            <label for="email" id="email-label" >Email:</label><br>
+            <input type="text" class="input" id="email-field" name="email" required="true"><br>
+            <span id="email-error"></span> <br>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name-field" pattern="[a-zA-Z]+" name="name" required="true"><br><br>
+            <span id="name-error"></span> <br>
+            <label for="unique-id" id="unique-id-label">Unique Id:</label><br>
+            <input type="text" id="unique-id-field" pattern="[a-zA-Z0-9]+" name="unique-id" required="true"><br>
+            <span id="unique-id-error"></span> <br>
+            <label for="article-name" id="article-name" name="article-name">Article Name:</label><br>
+            <input type="text" id="article-name-field" name="article-name" required="true"><br>
+            <span id="article-name-error"></span> <br>
+            <label for="phone-no" id="phone-no" name="phone-no">Phone No:</label><br>
+            <input type="tel" id="phone-no-field" name="phone-no" required="true"><br>
+            <span id="phone-no-error"></span> <br>
+            <span class="confirmation" id="confirmation">
+                <h3> Do you want to Submit ?</h3>
+                <button onclick="onCancel()">Submit</button>
+            </span>
+            <input type="submit" class="button" id="submit" onclick="onSubmit()" value="Create Article" disabled >
+        </form> 
+    </div>
+    <div class="confirmation" id="confirmation-box">
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
