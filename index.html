@@ -19,7 +19,7 @@
             <input type="text" class="input" id="email-field" name="email" required="true"><br>
             <span id="email-error"></span> <br>
             <label for="name">Full Name:</label><br>
-            <input type="text" id="name-field" pattern="[a-zA-Z]+" name="name" required="true"><br><br>
+            <input type="text" id="name-field" pattern="[a-zA-Z]+" name="name" required="true"><br>
             <span id="name-error"></span> <br>
             <label for="unique-id" id="unique-id-label">Unique Id:</label><br>
             <input type="text" id="unique-id-field" pattern="[a-zA-Z0-9]+" name="unique-id" required="true"><br>
@@ -30,15 +30,13 @@
             <label for="phone-no" id="phone-no" name="phone-no">Phone No:</label><br>
             <input type="tel" id="phone-no-field" name="phone-no" required="true"><br>
             <span id="phone-no-error"></span> <br>
-            <span class="confirmation" id="confirmation">
+            <div class="confirmation" id="confirmation">
                 <h3> Do you want to Submit ?</h3>
-                <button onclick="onCancel()">Submit</button>
-            </span>
-            <input type="submit" class="button" id="submit" onclick="onSubmit()" value="Create Article" disabled >
-        </form> 
-    </div>
-    <div class="confirmation" id="confirmation-box">
-        
+                <input id="btn-cancel" class="button" onclick="onCancel()" value="Cancel">
+                <input type="submit" class="button" id="submit" onclick="onConfirm()" value="Submit" > <br>
+            </div>
+            <input id="dummy-submit" class= "" type="button" value="Submit" onclick="onSubmit()" disabled > 
+        </form>         
     </div>
     <script src="index.js"></script>
 </body>
